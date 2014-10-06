@@ -108,7 +108,9 @@ module.exports = function (data, opts) {
 
 			// Enable gulp-data usage, Extend default data with data from file.data
 			if(file.data){
-				_data = extend(_data, file.data);
+				_data = extend(_data, file.data, {
+					file: file
+				});
 			}
 			var template = Handlebars.compile(fileContents);
 			file.contents = new Buffer(template(_data));
