@@ -2,7 +2,6 @@ var gutil = require('gulp-util');
 var through = require('through2');
 var Handlebars = require('handlebars');
 var fs = require('fs');
-var extend = require('util')._extend;
 
 module.exports = function (data, opts) {
 
